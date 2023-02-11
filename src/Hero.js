@@ -1,4 +1,6 @@
-export default function Hero({ name, modified, resourceURI }) {
+import PropTypes from 'prop-types';
+
+function Hero({ name, modified, resourceURI }) {
   return (
     <li>
       <h2>{name}</h2>
@@ -8,3 +10,11 @@ export default function Hero({ name, modified, resourceURI }) {
     </li>
   );
 }
+
+Hero.propTypes = {
+  name: PropTypes.string.isRequired,
+  modified: PropTypes.string.isRequired,
+  resourceURI: PropTypes.string.isRequired,
+};
+
+export default Hero;
